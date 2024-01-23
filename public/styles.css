@@ -31,7 +31,7 @@ p:not(#scroll-buttons a) {
 
 p,
 a {
-  font-size: 18px;
+  font-size: 20px;
 }
 a {
   cursor: pointer;
@@ -313,7 +313,7 @@ p .primary {
   p,
   a {
     line-height: 30px;
-    font-size: 20px;
+    font-size: 18px;
   }
 
 	.work-container .work-item:nth-child(2) {
@@ -353,7 +353,7 @@ p .primary {
   p,
   a {
     line-height: 30px;
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .work-container .work-item:nth-child(2) {
