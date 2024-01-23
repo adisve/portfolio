@@ -45,6 +45,7 @@ p,
 a {
   width: 100%;
 }
+
 .primary {
   text-decoration: none;
   cursor: pointer;
@@ -74,7 +75,7 @@ p .primary {
 }
 
 .centered p {
-  width: 90% !important;
+  width: 80% !important;
 }
 
 .scroll-button {
@@ -139,16 +140,19 @@ p .primary {
   left: 80%;
   animation-delay: 0s;
 }
+
 .work-container .work-item:nth-child(2) {
   top: 15%;
   left: 15%;
   animation-delay: 1.4s;
 }
+
 .work-container .work-item:nth-child(3) {
   top: 80%;
   left: 10%;
   animation-delay: 0.5s;
 }
+
 .work-container .work-item:nth-child(4) {
   top: 80%;
   left: 70%;
@@ -216,7 +220,7 @@ p .primary {
   right: 5%;
   z-index: 0;
   animation: float 6s ease-in-out infinite;
-  filter: invert(60%) sepia(50%) saturate(500%) hue-rotate(105deg)
+  filter: invert(80%) sepia(50%) saturate(500%) hue-rotate(105deg)
     brightness(100%) contrast(80%);
 }
 
@@ -239,4 +243,128 @@ p .primary {
   100% {
     transform: translatey(0px);
   }
+}
+
+
+/* Dynamic */
+
+@media (max-width: 1400px) {
+
+	#scroll-buttons {
+		flex-direction: column;
+		align-items: flex-start;
+		text-align: left;
+	}
+
+	#scroll-buttons .scroll-button:last-child {
+		padding-top: 20px;
+		margin-left: 0;
+	}
+
+	#contact-options {
+		flex-direction: column;
+		align-items: flex-start;
+		text-align: left;
+	}
+
+	#contact-options a {
+		padding-top: 24px;
+		font-size: 30px;
+	}
+
+	.centered {
+		width: 80%;
+	}
+
+	.centered p {
+		width: 70% !important;
+	}
+
+	p, a {
+		line-height: 30px;
+		font-size: 22px;
+	}
+}
+
+@media (max-width: 768px) {
+	.centered {
+		width: 80%;
+	}
+
+	p, a {
+		line-height: 30px;
+		font-size: 20px;
+	}
+
+	.work-container .work-item:nth-child(3) {
+		top: 90%;
+		left: 10%;
+		animation-delay: 0.5s;
+	}
+
+	.work-container .work-item:nth-child(4) {
+		top: 80%;
+		left: 70%;
+		animation-delay: 1.7s;
+	}
+
+	#contact-options {
+		width: 100%;
+	}
+
+	#contact-options a {
+		padding-top: 25px;
+		font-size: 22px;
+	}
+
+}
+
+@media (max-width: 500px) {
+	.centered {
+		width: 80%;
+	}
+	
+	.section {
+		width: 100%;
+	}
+
+	p {
+		width: 100% !important;
+	}
+
+	h1 {
+		font-size: 40px;
+	}
+
+	p, a {
+  	line-height: 30px;
+		font-size: 16px;
+	}
+
+	.work-container .work-item:nth-child(2) {
+		top: 2.5%;
+		left: 15%;
+		animation-delay: 1.4s;
+	}
+
+	.work-container .work-item:nth-child(3) {
+		top: 90%;
+		left: 10%;
+		animation-delay: 0.5s;
+	}
+
+	.work-container .work-item:nth-child(4) {
+		top: 80%;
+		left: 70%;
+		animation-delay: 1.7s;
+	}
+
+	#contact-options {
+		width: 100%;
+	}
+
+	#contact-options a {
+		padding-top: 25px;
+		font-size: 22px;
+	}
 }

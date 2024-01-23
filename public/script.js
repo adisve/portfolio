@@ -1,4 +1,4 @@
-function scrollToElement(element) {
+const scrollToElement = (element) => {
   document.querySelector(element).scrollIntoView({
     behavior: "smooth",
   });
@@ -14,7 +14,14 @@ document.querySelector('a[href="#my-work"]').addEventListener("click", (e) => {
   scrollToElement("#my-work");
 });
 
-function loadSVG(svgUrl, targetElementId) {
+const sendEmail = () => {
+  var subject = encodeURIComponent("Contact form");
+  var body = encodeURIComponent("Hello Adis, I'd like to contact you about ...");
+  var url = "mailto:adis.veletanlic@gmail.com?subject=" + subject + "&body=" + body;
+  window.location.href = url;
+}
+
+const loadSVG = (svgUrl, targetElementId) => {
   var xhr = new XMLHttpRequest();
   xhr.open("GET", svgUrl, true);
   xhr.onreadystatechange = function () {
@@ -27,7 +34,7 @@ function loadSVG(svgUrl, targetElementId) {
   xhr.send();
 }
 
-function initSVGAnimation() {
+const initSVGAnimation = () => {
   var path = document.getElementById("path-me");
   var length = path.getTotalLength();
 
