@@ -99,6 +99,7 @@ p .primary {
 }
 
 .work-item {
+  z-index: 0;
   transform: translatey(0px);
   animation: float 6s ease-in-out infinite;
   position: absolute;
@@ -160,16 +161,28 @@ p .primary {
   animation-delay: 1.7s;
 }
 
-#svg-container {
+#contact {
+  overflow: hidden;
+}
+
+#svg-container-me {
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: 0;
 }
 
-#path-me {
+#svg-container-phone {
+  position: absolute;
+  bottom: -10%;
+  right: -10%;
+  z-index: 0;
+}
+
+#path-me, #path-phone {
   fill: none;
   stroke: var(--secondary-text-color);
+  opacity: 70%;
   stroke-width: 1;
 }
 
@@ -221,8 +234,6 @@ p .primary {
   right: 5%;
   z-index: 0;
   animation: float 6s ease-in-out infinite;
-  filter: invert(80%) sepia(50%) saturate(500%) hue-rotate(105deg)
-    brightness(100%) contrast(80%);
 }
 
 #star-2 {
@@ -230,6 +241,7 @@ p .primary {
   top: 10%;
   right: 20%;
   z-index: 0;
+  opacity: 70%;
   animation: float 6s ease-in-out infinite;
   animation-delay: 1.7s;
 }
@@ -262,9 +274,8 @@ p .primary {
 		display: none;
 	}
 
-	#path-me {
+	#path-me, #path-phone {
 		stroke-width: 0.5px;
-		opacity: 50%;
 	}
 
   .hover-underline-animation:hover::after {
@@ -341,6 +352,11 @@ p .primary {
   #contact-options a {
     padding-top: 25px;
     font-size: 22px;
+  }
+
+  #svg-container-phone {
+    bottom: -20%;
+    right: -50%;
   }
 }
 

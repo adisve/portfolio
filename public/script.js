@@ -21,21 +21,21 @@ const sendEmail = () => {
   window.location.href = url;
 }
 
-const loadSVG = (svgUrl, targetElementId) => {
+const loadSVG = (svgUrl, targetElementId, pathId) => {
   var xhr = new XMLHttpRequest();
   xhr.open("GET", svgUrl, true);
   xhr.onreadystatechange = function () {
     if (xhr.readyState == 4 && xhr.status == 200) {
       var svg = xhr.responseText;
       document.getElementById(targetElementId).innerHTML = svg;
-      initSVGAnimation();
+      initSVGAnimation(pathId);
     }
   };
   xhr.send();
 }
 
-const initSVGAnimation = () => {
-  var path = document.getElementById("path-me");
+const initSVGAnimation = (svgElementId) => {
+  var path = document.getElementById(svgElementId);
   var length = path.getTotalLength();
 
   path.style.strokeDasharray = length;
@@ -47,5 +47,6 @@ const initSVGAnimation = () => {
 }
 
 window.onload = function () {
-  loadSVG("public/assets/me.svg", "svg-container");
+  loadSVG("public/assets/svg/me.svg", "svg-container-me", "path-me");
+  loadSVG("public/assets/svg/phone.svg", "svg-container-phone", "path-phone");
 };
