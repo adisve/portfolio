@@ -2,7 +2,7 @@ const scrollToElement = (element) => {
   document.querySelector(element).scrollIntoView({
     behavior: "smooth",
   });
-}
+};
 
 document.querySelector('a[href="#contact"]').addEventListener("click", (e) => {
   e.preventDefault();
@@ -16,10 +16,13 @@ document.querySelector('a[href="#my-work"]').addEventListener("click", (e) => {
 
 const sendEmail = () => {
   var subject = encodeURIComponent("Contact form");
-  var body = encodeURIComponent("Hello Adis, I'd like to contact you about ...");
-  var url = "mailto:adis.veletanlic@gmail.com?subject=" + subject + "&body=" + body;
+  var body = encodeURIComponent(
+    "Hello Adis, I'd like to contact you about ..."
+  );
+  var url =
+    "mailto:adis.veletanlic@gmail.com?subject=" + subject + "&body=" + body;
   window.location.href = url;
-}
+};
 
 const loadSVG = (svgUrl, targetElementId, pathId) => {
   var xhr = new XMLHttpRequest();
@@ -32,7 +35,7 @@ const loadSVG = (svgUrl, targetElementId, pathId) => {
     }
   };
   xhr.send();
-}
+};
 
 const initSVGAnimation = (svgElementId) => {
   var path = document.getElementById(svgElementId);
@@ -44,7 +47,7 @@ const initSVGAnimation = (svgElementId) => {
   path.getBoundingClientRect();
   path.style.transition = "stroke-dashoffset 14s ease-in-out";
   path.style.strokeDashoffset = "0";
-}
+};
 
 window.onload = function () {
   loadSVG("public/assets/svg/me.svg", "svg-container-me", "path-me");
