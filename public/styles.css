@@ -67,12 +67,18 @@ p .primary {
 }
 
 .centered {
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: left;
   text-align: left;
   width: 60%;
+  padding-left: 20px;
+}
+
+.centered p a {
+  border-bottom: 1px solid var(--primary-color);
 }
 
 .centered p {
@@ -141,6 +147,7 @@ p .primary {
   top: 30%;
   left: 80%;
   animation-delay: 0s;
+  z-index: 1;
 }
 
 .work-container .work-item:nth-child(2) {
@@ -261,7 +268,7 @@ p .primary {
 /* Dynamic */
 
 @media (max-width: 1400px) {
-
+  
 	.centered {
 		width: 80%;
 	}
@@ -343,6 +350,10 @@ p .primary {
     top: 80%;
     left: 70%;
     animation-delay: 1.7s;
+  }
+
+  .work-item {
+    opacity: 70%;
   }
 
   #contact-options {
