@@ -38,7 +38,7 @@ a {
 }
 h1 {
   font-size: 60px;
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 h1,
 p,
@@ -63,7 +63,7 @@ p .primary {
   align-items: center;
   height: 100vh;
   text-align: center;
-	z-index: 1;
+  z-index: 1;
 }
 
 .centered {
@@ -186,7 +186,8 @@ p .primary {
   z-index: 0;
 }
 
-#path-me, #path-phone {
+#path-me,
+#path-phone {
   fill: none;
   stroke: var(--secondary-text-color);
   opacity: 70%;
@@ -268,22 +269,22 @@ p .primary {
 /* Dynamic */
 
 @media (max-width: 1400px) {
-  
-	.centered {
-		width: 80%;
-	}
+  .centered {
+    width: 80%;
+  }
 
-	.centered p {
-		width: 75% !important;
-	}
+  .centered p {
+    width: 75% !important;
+  }
 
-	#star-1 {
-		display: none;
-	}
+  #star-1 {
+    display: none;
+  }
 
-	#path-me, #path-phone {
-		stroke-width: 0.5px;
-	}
+  #path-me,
+  #path-phone {
+    stroke-width: 0.5px;
+  }
 
   .hover-underline-animation:hover::after {
     transform: scaleX(0);
@@ -293,8 +294,8 @@ p .primary {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-		margin-left: 20px;
-		z-index: 1;
+    margin-left: 20px;
+    z-index: 1;
   }
 
   #scroll-buttons .scroll-button:last-child {
@@ -306,21 +307,22 @@ p .primary {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-		margin-left: 20px;
+    margin-left: 20px;
   }
 
-	#contact-options a {
-		padding-top: 15px;
-	}
+  #contact-options a {
+    padding-top: 15px;
+  }
 
-	h1 {
+  h1 {
     font-size: 40px;
   }
 
-	p, h1 {
-		margin-right: 20px;
-		margin-left: 20px;
-	}
+  p,
+  h1 {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -334,11 +336,11 @@ p .primary {
     font-size: 18px;
   }
 
-	.work-container .work-item:nth-child(2) {
-		top: 1.5%;
-		left: 15%;
-		animation-delay: 1.4s;
-	}
+  .work-container .work-item:nth-child(2) {
+    top: 1.5%;
+    left: 15%;
+    animation-delay: 1.4s;
+  }
 
   .work-container .work-item:nth-child(3) {
     top: 90%;
@@ -372,7 +374,6 @@ p .primary {
 }
 
 @media (max-width: 500px) {
-
   h1 {
     font-size: 30px;
   }
