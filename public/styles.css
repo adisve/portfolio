@@ -77,34 +77,6 @@ p .primary {
   padding-left: 20px;
 }
 
-.sidebar {
-  position: absolute;
-  background-color: #272727;
-  min-width: 5rem;
-  max-width: 5rem;
-  right: 0;
-  border-radius: 20px;
-  transform: translateX(-0.5rem);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 45vh;
-  transition: all 0.2s ease-in-out;
-}
-
-.app-icon-link {
-  text-decoration: none;
-}
-
-.app-icon-link img {
-  cursor: pointer;
-  width: 3.5rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  transition: all 0.2s ease-in-out;
-}
-
 #code-backdrop {
   position: absolute;
   z-index: -10;
@@ -343,20 +315,6 @@ p .primary {
 }
 
 @media (max-width: 500px) {
-  .sidebar {
-    position: relative;
-    max-width: none;
-    flex-direction: row;
-    height: auto;
-  }
-
-  .app-icon-link img {
-    margin: 0;
-    margin-top: 0.5rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-  }
-
   h1 {
     font-size: 30px;
   }

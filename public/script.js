@@ -1,23 +1,4 @@
 const App = {
-  workItems: [
-    {
-      imagePath: "public/assets/svg/cpp-app.svg",
-      link: "https://github.com/adisve/Chess-Game",
-    },
-    {
-      imagePath: "public/assets/svg/kotlin-app.svg",
-      link: "https://github.com/adisve/firebase-smart-house",
-    },
-    {
-      imagePath: "public/assets/svg/python-app.svg",
-      link: "https://github.com/adisve/brain-tumor-classifier",
-    },
-    {
-      imagePath: "public/assets/svg/swift-app.svg",
-      link: "https://github.com/adisve/Tumble-iOS",
-    },
-  ],
-
   scrollToElement(element) {
     document.querySelector(element).scrollIntoView({
       behavior: "smooth",
@@ -75,55 +56,7 @@ const App = {
     path.style.strokeDashoffset = "0";
   },
 
-  populateSidebarList() {
-    const sidebar = document.getElementById("project-links");
-    this.workItems.forEach((item) => {
-      const appItem = document.createElement("a");
-      appItem.className = "app-icon-link";
-      appItem.target = "_blank";
-      appItem.href = item.link;
-      appItem.innerHTML = `<img src="${item.imagePath}">`;
-      sidebar.appendChild(appItem);
-    });
-  },
-
-  addSidebarEventListeners() {
-    const sidebar = document.querySelector(".sidebar");
-    const icons = document.querySelectorAll(".app-icon-link > img");
-
-    sidebar.addEventListener("mousemove", (e) => {
-      if (window.innerWidth > 500) {
-        const sidebarRect = sidebar.getBoundingClientRect();
-        icons.forEach((icon) => {
-          const iconRect = icon.getBoundingClientRect();
-          const distanceY = Math.abs(
-            e.clientY - (iconRect.top + iconRect.height / 2)
-          );
-          const scale = Math.max(1, 1.5 - distanceY / 100);
-
-          icon.style.marginTop = "0.8rem";
-          icon.style.marginBottom = "0.8rem";
-          icon.style.transform = `scale(${scale * 0.95})`;
-        });
-        sidebar.style.height = "50vh";
-      }
-    });
-
-    sidebar.addEventListener("mouseleave", () => {
-      if (window.innerWidth > 500) {
-        icons.forEach((icon) => {
-          icon.style.transform = `scale(1)`;
-          icon.style.marginTop = "0.5rem";
-          icon.style.marginBottom = "0.5rem";
-        });
-        sidebar.style.height = "45vh";
-      }
-    });
-  },
-
   init() {
-    this.populateSidebarList();
-    this.addSidebarEventListeners();
     this.addEventListeners();
     window.onload = () => {
       this.loadSVG("public/assets/svg/me.svg", "svg-container-me", "path-me");
